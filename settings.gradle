@@ -1,0 +1,5 @@
+rootProject.name = 'GradleLearning'
+include 'closures'
+include 'properties'
+include 'strings'
+

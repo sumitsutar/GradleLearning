@@ -1,0 +1,15 @@
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+
+def doubleIt(Integer a) {
+    a*2
+}
+
+def res=doubleIt(4)
+logger.info "Printing results using Method Call doubleIt() and the result is : ${res}";
+
+def myString="This is the value of string"
+logger.info "String interpolation only works with Double Quotes"
+logger.info "Printing String now with Dollar and Curly braces : "
+logger.info "My String is ${myString} "

@@ -1,0 +1,41 @@
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+
+logger.info "Gradle also has Getter and Setter Concept as Java"
+logger.info "We don't really have to write the code for it though."
+logger.info "We don't really have to write the code for it though."
+
+
+class Person {
+    String name
+    Integer age
+
+    Person (age,name) {
+        this.age = age
+        this.name = name
+    }
+}
+
+logger.info "Creating Person Object"
+def person = new Person(30,"Harry")
+
+logger.info "Person's Name is ${person.name} and age is ${person.age}"
+
+
+logger.info "We can also use Java collections in Gradle Scripts - e.g. a Hashmap can be created as below"
+
+Map m = new HashMap()
+m.put("Cat","Tom")
+m.put("Mouse","Jerry")
+
+logger.info """Hashmap Values can be read using get () method as we do in java 
+or 
+you can use property style like <OBJECT>.<PropertyName>. 
+
+We will print the values of Hashmap using both the methods   
+
+"""
+
+logger.info "Using Get Method - ${m.get("Cat")}"
+logger.info "Using Property Style - ${m.Mouse}"
