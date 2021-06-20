@@ -3,13 +3,10 @@ version '1.0-SNAPSHOT'
 
 //Closures
 logger.info """ 
+>>>>>>>>The Closures are like methods in gradle. The value of the last statment will be returned.
 
-The Closures are like methods in gradle. 
-
-The value of the last statment will be returned.
-
-            EXAMPLE - 1 : A Closure which returns the UpperCase String 
-            We can also pass a parameter to a closure using '->' symbol 
+>>>>>>>>            EXAMPLE - 1 : A Closure which returns the UpperCase String 
+>>>>>>>>            We can also pass a parameter to a closure using '->' symbol 
 
 """
 
@@ -17,25 +14,25 @@ def capitalise = { String lowerCaseString ->
     lowerCaseString.toUpperCase()
 }
 
-logger.info "Printing the capitalised string using Closures : ${capitalise("capitaliseme")}"
+logger.info ">>>>>>>> Printing the capitalised string using Closures : ${capitalise("capitaliseme")}"
 
 
 
 logger.info """ 
 
-        The Closures can also be passed to a method like a Lambda Expression 
-        EXAMPLE - 2 : Paasing A Closure to a method which replace all 'A' with 'a' and return the resulting string 
-                        IN this example - note that the closure is always the last argument if there are more than one parameter 
-                        This gives us a benefit of writing the method call without paranthesis () 
-                        i.e. - replaceAWithLowercase(arg1,closure) can also be called as - replaceAWithLowercase arg1,closure
+>>>>>>>>        The Closures can also be passed to a method like a Lambda Expression 
+>>>>>>>>        EXAMPLE - 2 : Paasing A Closure to a method which replace all 'A' with 'a' and return the resulting string 
+>>>>>>>>                        IN this example - note that the closure is always the last argument if there are more than one parameter 
+>>>>>>>>                        This gives us a benefit of writing the method call without paranthesis () 
+>>>>>>>>                        i.e. - replaceAWithLowercase(arg1,closure) can also be called as - replaceAWithLowercase arg1,closure
 """
 
 def replaceAWithLowercase(String arg,myClosure) {
     myClosure(arg).replace("A","a")
 }
 
-logger.info "calling closure via method - ${replaceAWithLowercase("argumentStringValue",capitalise)}"
-logger.info "calling closure via method one more time"
+logger.info ">>>>>>>> calling closure via method - ${replaceAWithLowercase("argumentStringValue",capitalise)}"
+logger.info ">>>>>>>> calling closure via method one more time"
 def result=replaceAWithLowercase "argumentStringValue", capitalise
 logger.info result
 
@@ -47,12 +44,11 @@ logger.info result
 
 logger.info """ 
 
-                Let's take a look at a concept called Closure resolution  
-            
-                EXAMPLE - 3 : 
-                    Every Closure holds a reference of the context in which that closure was defined.
-                    It's the 'delegate' property of a closure that holds the value of the reference
-                    i.e. <closureObj>.delegate holds a reference to its context 
+>>>>>>>>Let's take a look at a concept called Closure resolution  
+>>>>>>>>EXAMPLE - 3 : 
+>>>>>>>> Every Closure holds a reference of the context in which that closure was defined.
+>>>>>>>> It's the 'delegate' property of a closure that holds the value of the reference
+>>>>>>>> i.e. <closureObj>.delegate holds a reference to its context 
 """
 
 class Person {

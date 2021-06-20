@@ -7,9 +7,9 @@ def doubleIt(Integer a) {
 }
 
 def res=doubleIt(4)
-logger.info "Printing results using Method Call doubleIt() and the result is : ${res}";
+logger.info ">>>>>>>> Printing results using Method Call doubleIt() and the result is : ${res}";
 
-def myString="This is the value of string"
-logger.info "String interpolation only works with Double Quotes"
-logger.info "Printing String now with Dollar and Curly braces : "
-logger.info "My String is ${myString} "
+def myString=">>>>>>>> This is the value of string"
+logger.info ">>>>>>>> String interpolation only works with Double Quotes"
+logger.info ">>>>>>>> Printing String now with Dollar and Curly braces : "
+logger.info ">>>>>>>> My String is ${myString} "

@@ -1,0 +1,29 @@
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+logger.info """
+>>>>>>>> We have seen that objects can have different attributes in 'properties' project of this module. But you can also have define your properties as a key value pair just like in java. 
+>>>>>>>> The properties file can be placed at root folder and that's all. Gradle does an amazing job of importing this properties file. 
+>>>>>>>> Please bear in mind - 'It is a best practice to check if the property exist before using it. For this you can use hasProperty() method.   
+>>>>>>>>
+>>>>>>>> For example We will create a file under this project and see if we can access it in this file as well as in the root level build.gradle as well. 
+>>>>>>>> STEP -1 : Create a file viz. gradle-properties/gradle.properties
+>>>>>>>> STEP -2 : create a properties with viz. 'movie:Avengers and greatestAvenger:Tony Stark' in gradle-properties/gradle.properties
+>>>>>>>> STEP -3 : read properties from gradle-properties/gradle.properties in this build.gradle
+>>>>>>>> STEP -4 : read properties from gradle-properties/gradle.properties in root level build.gradle
+>>>>>>>>
+
+"""
+
+if (project.hasProperty("movie")) {
+    logger.info ">>>>>>>> The Movie property has value :  ${movie} "
+} else {
+    logger.info ">>>>>>>> The Movie property not found "
+}
+
+if (project.hasProperty("greatestAvenger")) {
+    logger.info ">>>>>>>> The greatestAvenger property has value : ${greatestAvenger} "
+} else {
+    logger.info ">>>>>>>> The greatestAvenger property not found "
+}
+

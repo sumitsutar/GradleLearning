@@ -1,2 +1,31 @@
 group 'org.example'
 version '1.0-SNAPSHOT'
+
+logger.info "***************************************************************************************************"
+
+logger.info ">>>>>>>>>>> Reading values from gredle-properties/gradle.properties file"
+
+if (project.hasProperty("movie")) {
+    logger.info ">>>>>>>> The Movie property has value :  ${movie} "
+} else {
+    logger.info ">>>>>>>> The Movie property not found " //This line will be printed
+}
+
+if (project.hasProperty("greatestAvenger")) {
+    logger.info ">>>>>>>> The greatestAvenger property has value : ${greatestAvenger} "
+} else {
+    logger.info ">>>>>>>> The greatestAvenger property not found " //This line will be printed
+}
+
+logger.info ">>>>>>>>>>> Reading closure value declared in settings.gradle file using extraPropertiesExtension feature provided by Gradle"
+
+logger.info ">>>>>>>>>>> Reading closure value of timestamp in settings.gradle is : "
+if (project.gradle.hasProperty("currentDateTime")) {
+    logger.info ">>>>>>>> The currentDateTime property has value : "
+    logger.info project.gradle.currentDateTime()
+} else {
+    logger.info ">>>>>>>> The currentDateTime property not found "
+}
+
+
+logger.info "***************************************************************************************************"

@@ -29,13 +29,14 @@ Map m = new HashMap()
 m.put("Cat","Tom")
 m.put("Mouse","Jerry")
 
-logger.info """Hashmap Values can be read using get () method as we do in java 
-or 
-you can use property style like <OBJECT>.<PropertyName>. 
+logger.info """
+>>>>>>>> Hashmap Values can be read using get () method as we do in java 
+>>>>>>>> or 
+>>>>>>>> you can use property style like <OBJECT>.<PropertyName>. 
 
-We will print the values of Hashmap using both the methods   
+>>>>>>>> We will print the values of Hashmap using both the methods   
 
 """
 
-logger.info "Using Get Method - ${m.get("Cat")}"
-logger.info "Using Property Style - ${m.Mouse}"
+logger.info ">>>>>>>> Using Get Method - ${m.get("Cat")}"
+logger.info ">>>>>>>> Using Property Style - ${m.Mouse}"

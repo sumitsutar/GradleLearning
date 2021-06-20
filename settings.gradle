@@ -2,4 +2,13 @@ rootProject.name = 'GradleLearning'
 include 'closures'
 include 'properties'
 include 'strings'
+include 'gradle-properties'
 
+
+logger.info ">>>>>>>> Creating a closure using extraPropertiesExtension feature provided by Gradle."
+import java.text.*;
+gradle.ext.currentDateTime = {
+    def df = new SimpleDateFormat("DD-MM-YYYY'T'HH:MM:SS'Z'")
+    df.setTimeZone(TimeZone.getTimeZone("UTC"))
+    return df.format(new Date())
+}
