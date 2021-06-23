@@ -12,3 +12,5 @@ gradle.ext.currentDateTime = {
     df.setTimeZone(TimeZone.getTimeZone("UTC"))
     return df.format(new Date())
 }
+include 'gradle-tasks-configuration-example'
+
