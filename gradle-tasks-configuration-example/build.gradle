@@ -1,0 +1,32 @@
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+task hello
+
+project.hello.doLast {
+    logger.info " ******* This is the body of doLast() method of hello task. We had initialised it using '.' operator. like - project.hello.doLast { <<method body goes here>> } *******"
+}
+
+
+task anotherWayOfCreatingTask {
+
+    description "******* This is the value of the description property of 'anotherWayOfCreatingTask' *******"
+    group "******* gredle-tasks-configuration-example-group *******"
+
+    doFirst{
+        logger.info "******* This is the doFirst() method within anotherTask. doFirstIndex - 1. *******" // This doFirst will execute after Outer doFirst() method.
+    }
+
+    doLast{
+        logger.info "******* This is the doLast() method within anotherTask. doLastIndex - 1. *******" // This doLast will execute before Outer doFirst() method.
+    }
+}
+
+
+project.anotherWayOfCreatingTask.doFirst {
+        logger.info "******* This is the doFirst() method within anotherTask. doFirstIndex - 2. *******"
+}
+
+project.anotherWayOfCreatingTask.doLast {
+    logger.info "******* This is the doLast() method within anotherTask. doLastIndex - 2. *******"
+}
